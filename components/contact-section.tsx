@@ -31,7 +31,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-20 sm:py-32 bg-background relative overflow-hidden">
+    <section id="contact" className="py-20 sm:py-32 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full filter blur-3xl -z-10 animate-float"></div>
       <div
         className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full filter blur-3xl -z-10 animate-float"

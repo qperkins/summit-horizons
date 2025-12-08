@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Image from "next/image"
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
@@ -10,64 +11,95 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen bg-background flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full filter blur-3xl animate-float"></div>
-        <div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full filter blur-3xl animate-float"
-          style={{ animationDelay: "1s" }}
-        ></div>
-        <div
-          className="absolute top-1/2 left-1/2 w-80 h-80 bg-secondary/10 rounded-full filter blur-3xl animate-float"
-          style={{ animationDelay: "2s" }}
-        ></div>
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div
-          className={`space-y-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-        >
-          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold text-balance leading-tight">
-            <span className="bg-gradient-to-r from-accent via-secondary to-accent bg-clip-text text-transparent">
-              Expert Childcare
-            </span>
-            <br />
-            <span className="text-foreground">Consulting</span>
-          </h1>
-
-          <p
-            className="text-lg sm:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto text-balance leading-relaxed animate-slideInRight"
-            style={{ animationDelay: "0.2s" }}
-          >
-            Comprehensive guidance for childcare centers and entrepreneurs. From operational excellence to compliance
-            and family support—we help you build thriving childcare programs.
-          </p>
-
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Text Content */}
           <div
-            className="flex gap-4 justify-center pt-8 flex-wrap animate-slideInRight"
-            style={{ animationDelay: "0.4s" }}
+            className={`space-y-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <a
-              href="#contact"
-              className="bg-gradient-to-r from-accent to-primary text-accent-foreground px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl hover:shadow-accent/50 transition-all duration-300 transform hover:scale-105 active:scale-95"
+            <div className="space-y-4">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground text-balance leading-tight">
+                Expert
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  {" "}
+                  Childcare{" "}
+                </span>
+                Consulting
+              </h1>
+            </div>
+
+            <p
+              className="text-lg sm:text-xl text-muted-foreground max-w-xl text-balance leading-relaxed animate-slideInRight"
+              style={{ animationDelay: "0.2s" }}
             >
-              Get Started
-            </a>
-            <a
-              href="#services"
-              className="border-2 border-accent text-accent px-8 py-4 rounded-lg font-bold text-lg hover:bg-accent/10 transition-all duration-300 transform hover:scale-105 active:scale-95"
-            >
-              Learn More
-            </a>
+              Comprehensive guidance for childcare centers and entrepreneurs. From operational excellence to compliance
+              and family support—we help you build thriving childcare programs.
+            </p>
+
+            <div className="flex gap-4 pt-8 flex-wrap animate-slideInRight" style={{ animationDelay: "0.4s" }}>
+              <a
+                href="#contact"
+                className="bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 transform hover:scale-105 active:scale-95"
+              >
+                Get Started
+              </a>
+              <a
+                href="#services"
+                className="border-2 border-primary text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary/5 transition-all duration-300 transform hover:scale-105 active:scale-95"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+
+          <div className="relative h-96 lg:h-full min-h-96 grid grid-cols-2 gap-4 animate-slideInLeft">
+            <div className="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
+              <Image
+                src="/happy-children-playing-in-a-bright-childcare-cente.jpg"
+                alt="Children playing in childcare"
+                width={300}
+                height={300}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 mt-8">
+              <Image
+                src="/professional-childcare-teacher-with-diverse-group-.jpg"
+                alt="Childcare teacher with children"
+                width={300}
+                height={300}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
+              <Image
+                src="/parents-meeting-with-childcare-center-staff-discus.jpg"
+                alt="Parents and staff meeting"
+                width={300}
+                height={300}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 mt-8">
+              <Image
+                src="/modern-bright-childcare-facility-with-safe-learnin.jpg"
+                alt="Modern childcare facility"
+                width={300}
+                height={300}
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float">
-        <div className="w-6 h-10 border-2 border-accent rounded-full flex justify-center">
-          <div className="w-1 h-2 bg-accent rounded-full mt-2 animate-float"></div>
+        <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
+          <div className="w-1 h-2 bg-primary rounded-full mt-2 animate-float"></div>
         </div>
       </div>
     </section>

@@ -5,25 +5,25 @@ import { Button } from "@/components/ui/button"
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-primary backdrop-blur supports-[backdrop-filter]:bg-primary/95">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <span className="text-2xl font-bold text-primary-foreground">
             Summit Horizons
           </span>
         </Link>
         <nav className="hidden md:flex items-center space-x-6">
-          <Link href="#services" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link href="#services" className="text-sm font-medium text-primary-foreground transition-colors hover:text-accent">
             Services
           </Link>
-          <Link href="#about" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link href="#about" className="text-sm font-medium text-primary-foreground transition-colors hover:text-accent">
             About
           </Link>
-          <Link href="#contact" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link href="#contact" className="text-sm font-medium text-primary-foreground transition-colors hover:text-accent">
             Contact
           </Link>
         </nav>
-        <Button asChild className="hidden md:flex">
+        <Button asChild variant="outline" className="hidden md:flex bg-accent hover:bg-accent/90 text-accent-foreground border-accent">
           <Link href="#contact">Get Started</Link>
         </Button>
       </div>

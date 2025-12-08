@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="bg-background border-t border-border relative overflow-hidden">
+    <footer className="border-t border-border relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-accent/5 -z-10"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -12,11 +12,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-accent via-primary to-secondary rounded-xl flex items-center justify-center animate-glow">
-                <span className="text-primary font-bold">SH</span>
+              <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center animate-glow shadow-lg relative">
+                <span className="text-primary-foreground font-bold relative z-10">SH</span>
+                <div className="absolute inset-0 bg-accent/30 rounded-xl blur-md -z-0"></div>
               </div>
-              <span className="font-bold text-lg bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
-                Summit Horizons
+              <span className="font-bold text-lg">
+                <span className="text-accent">Summit</span>{" "}
+                <span className="text-foreground">Horizons</span>
               </span>
             </div>
             <p className="text-muted-foreground">
