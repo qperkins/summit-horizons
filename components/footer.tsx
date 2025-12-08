@@ -90,10 +90,10 @@ export default function Footer() {
             <h4 className="font-bold text-foreground mb-4">Contact</h4>
             <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider">Email</p>
             <a
-              href="mailto:info@summithorizons.com"
+              href="mailto:info@summithorizons.org"
               className="text-foreground hover:text-accent transition-colors duration-300 text-sm block mb-4 font-medium"
             >
-              info@summithorizons.com
+              info@summithorizons.org
             </a>
             <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider">Phone</p>
             <a

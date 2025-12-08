@@ -69,10 +69,10 @@ export default function ContactSection() {
             </h3>
             <p className="text-muted-foreground mb-4">Send us a detailed message at your convenience</p>
             <a
-              href="mailto:info@summithorizons.com"
+              href="mailto:info@summithorizons.org"
               className="text-accent hover:text-accent/80 font-bold transition-colors duration-300 break-all inline-block group-hover:underline"
             >
-              info@summithorizons.com
+              info@summithorizons.org
             </a>
             <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-accent to-secondary w-0 group-hover:w-full transition-all duration-500"></div>
           </div>
