@@ -36,14 +36,14 @@ export default function Services() {
   ]
 
   const [visibleCards, setVisibleCards] = useState<number[]>([])
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([])
+  const cardsRef = useRef<(HTMLAnchorElement | null)[]>([])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = cardsRef.current.indexOf(entry.target as HTMLDivElement)
+            const index = cardsRef.current.indexOf(entry.target as HTMLAnchorElement)
             setVisibleCards((prev) => [...new Set([...prev, index])])
           }
         })
