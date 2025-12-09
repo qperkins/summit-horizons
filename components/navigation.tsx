@@ -26,7 +26,7 @@ export default function Navigation() {
                 priority
               />
             </div>
-            <span className="font-bold text-lg hidden sm:inline text-primary">Summit Horizons</span>
+            <span className="font-bold text-base sm:text-lg text-primary">Summit Horizons</span>
           </Link>
 
           {/* Desktop Menu */}
