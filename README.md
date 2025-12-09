@@ -72,7 +72,7 @@ summit-horizons/
 
 Edit the contact details in `components/contact.tsx`:
 - Email: `info@summithorizons.org`
-- Phone: `(555) 123-4567`
+- Phone: `866-567-5220`
 
 ### Modify Services
 

@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -11,15 +12,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center animate-glow shadow-lg relative">
-                <span className="text-primary-foreground font-bold relative z-10">SH</span>
-                <div className="absolute inset-0 bg-accent/30 rounded-xl blur-md -z-0"></div>
+            <div className="flex items-center">
+              <div className="relative w-40 h-40 flex items-center justify-center">
+                <Image
+                  src="/SHLogo.png"
+                  alt="Summit Horizons Logo"
+                  width={160}
+                  height={160}
+                  className="object-contain"
+                />
               </div>
-              <span className="font-bold text-lg">
-                <span className="text-accent">Summit</span>{" "}
-                <span className="text-foreground">Horizons</span>
-              </span>
             </div>
             <p className="text-muted-foreground">
               Expert childcare consulting for centers, entrepreneurs, and families.
@@ -63,6 +65,22 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
+                  href="/about"
+                  className="text-muted-foreground hover:text-accent transition-colors duration-300"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/shop"
+                  className="text-muted-foreground hover:text-accent transition-colors duration-300"
+                >
+                  Shop
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/resources"
                   className="text-muted-foreground hover:text-accent transition-colors duration-300"
                 >
@@ -76,7 +94,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/#contact"
+                  href="/contact"
                   className="text-muted-foreground hover:text-accent transition-colors duration-300"
                 >
                   Contact Us
@@ -97,10 +115,10 @@ export default function Footer() {
             </a>
             <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider">Phone</p>
             <a
-              href="tel:+1-800-SUMMIT-1"
+              href="tel:+18665675220"
               className="text-foreground hover:text-accent transition-colors duration-300 text-sm font-medium"
             >
-              +1 (800) SUMMIT-1
+              866-567-5220
             </a>
           </div>
         </div>

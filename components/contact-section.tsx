@@ -98,10 +98,10 @@ export default function ContactSection() {
             </h3>
             <p className="text-muted-foreground mb-4">Speak directly with our team</p>
             <a
-              href="tel:+1-800-SUMMIT-1"
+              href="tel:+18665675220"
               className="text-accent hover:text-accent/80 font-bold text-lg transition-colors duration-300 group-hover:underline"
             >
-              +1 (800) SUMMIT-1
+              866-567-5220
             </a>
             <p className="text-sm text-muted-foreground mt-2">Monday-Friday, 9am-5pm EST</p>
             <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-accent to-secondary w-0 group-hover:w-full transition-all duration-500"></div>
