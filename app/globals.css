@@ -169,15 +169,15 @@
 }
 
 .animate-fadeInUp {
-  animation: fadeInUp 0.6s ease-out;
+  animation: fadeInUp 0.6s ease-out backwards;
 }
 
 .animate-slideInRight {
-  animation: slideInRight 0.6s ease-out;
+  animation: slideInRight 0.6s ease-out backwards;
 }
 
 .animate-slideInLeft {
-  animation: slideInLeft 0.6s ease-out;
+  animation: slideInLeft 0.6s ease-out backwards;
 }
 
 .animate-glow {
@@ -191,7 +191,7 @@
 }
 
 .animate-scaleIn {
-  animation: scaleIn 0.6s ease-out;
+  animation: scaleIn 0.6s ease-out backwards;
 }
 
 /* Floating blob animations */
