@@ -24,7 +24,6 @@ export default function Navigation() {
                 height={40}
                 className="object-contain"
                 priority
-                unoptimized={false}
               />
             </div>
             <span className="font-bold text-base sm:text-lg text-primary">Summit Horizons</span>

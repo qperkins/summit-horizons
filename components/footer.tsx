@@ -20,7 +20,6 @@ export default function Footer() {
                   width={160}
                   height={160}
                   className="object-contain"
-                  unoptimized={false}
                 />
               </div>
             </div>

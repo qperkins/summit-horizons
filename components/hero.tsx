@@ -56,7 +56,7 @@ export default function Hero() {
           </div>
 
           <div className="relative h-96 lg:h-full min-h-96 grid grid-cols-2 gap-4 animate-slideInLeft">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
+            <div className="relative h-48 lg:h-64 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
               <Image
                 src="/pexels-shvetsa-11369305.jpg"
                 alt="Professional consultant taking notes"
@@ -66,7 +66,7 @@ export default function Hero() {
                 priority
               />
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 mt-8">
+            <div className="relative h-48 lg:h-64 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 mt-8">
               <Image
                 src="/pexels-pavel-danilyuk-8422172.jpg"
                 alt="Warm moment between caregiver and baby"
@@ -76,7 +76,7 @@ export default function Hero() {
                 priority
               />
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
+            <div className="relative h-48 lg:h-64 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
               <Image
                 src="/pexels-ron-lach-8541877.jpg"
                 alt="Children engaged in creative activities"
@@ -86,7 +86,7 @@ export default function Hero() {
                 priority
               />
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 mt-8">
+            <div className="relative h-48 lg:h-64 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 mt-8">
               <Image
                 src="/pexels-pavel-danilyuk-8423065.jpg"
                 alt="Children playing with modeling clay"
