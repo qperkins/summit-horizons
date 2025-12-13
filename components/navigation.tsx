@@ -46,7 +46,7 @@ export default function Navigation() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
-              href="#resources"
+              href="/resources"
               className="text-primary hover:text-accent transition-colors duration-300 relative group"
             >
               Resources
@@ -100,7 +100,7 @@ export default function Navigation() {
             <Link href="/services" className="block text-primary hover:text-accent transition-colors">
               Services
             </Link>
-            <Link href="#resources" className="block text-primary hover:text-accent transition-colors">
+            <Link href="/resources" className="block text-primary hover:text-accent transition-colors">
               Resources
             </Link>
             <Link href="/contact" className="block text-primary hover:text-accent transition-colors">

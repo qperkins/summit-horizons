@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function ServicesPage() {
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
@@ -36,6 +37,7 @@ export default function ServicesPage() {
       id: "consulting",
       title: "Childcare Consulting",
       icon: "🎯",
+      image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1920&q=90&auto=format&fit=crop",
       description:
         "Comprehensive operational guidance for childcare centers and entrepreneurs. Whether you're launching a new program or optimizing existing operations, we help you achieve excellence.",
       longDescription:
@@ -61,6 +63,7 @@ export default function ServicesPage() {
       id: "insurance",
       title: "Insurance Guidance",
       icon: "🛡️",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=90&auto=format&fit=crop",
       description:
         "Navigate childcare insurance complexity with confidence. We provide clear guidance on coverage options, risk management, and compliance requirements.",
       longDescription:
@@ -86,6 +89,7 @@ export default function ServicesPage() {
       id: "parental",
       title: "Parental Care Information",
       icon: "👨‍👩‍👧‍👦",
+      image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1920&q=90&auto=format&fit=crop",
       description:
         "Comprehensive resources for parents navigating childcare decisions. We bridge the gap between providers and families with education and support.",
       longDescription:
@@ -111,6 +115,7 @@ export default function ServicesPage() {
       id: "compliance",
       title: "Compliance & Regulations",
       icon: "📋",
+      image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=90&auto=format&fit=crop",
       description:
         "Stay current with licensing requirements, safety standards, and regulatory compliance specific to childcare operations.",
       longDescription:
@@ -180,6 +185,20 @@ export default function ServicesPage() {
                   <div className="group relative bg-card/50 backdrop-blur-sm border border-border rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
                     {/* Decorative gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                    {/* Image Placeholder */}
+                    <div className="relative w-full h-64 sm:h-80 overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        quality={95}
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1920px"
+                        priority={index < 2}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent"></div>
+                    </div>
 
                     <div className="relative p-8 sm:p-12 lg:p-16">
                       {/* Header */}
@@ -269,7 +288,7 @@ export default function ServicesPage() {
                           Get Started
                         </a>
                         <Link
-                          href="/login"
+                          href="/resources"
                           className="flex-1 sm:flex-none border-2 border-primary text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary/10 transition-all duration-300 transform hover:scale-105 active:scale-95 text-center"
                         >
                           View Resources

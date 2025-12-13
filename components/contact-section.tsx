@@ -70,7 +70,7 @@ export default function ContactSection() {
             <p className="text-muted-foreground mb-4">Send us a detailed message at your convenience</p>
             <a
               href="mailto:info@summithorizons.org"
-              className="text-accent hover:text-accent/80 font-bold transition-colors duration-300 break-all inline-block group-hover:underline"
+              className="text-primary hover:text-primary/80 font-bold transition-colors duration-300 break-all inline-block group-hover:underline"
             >
               info@summithorizons.org
             </a>
@@ -99,7 +99,7 @@ export default function ContactSection() {
             <p className="text-muted-foreground mb-4">Speak directly with our team</p>
             <a
               href="tel:+18665675220"
-              className="text-accent hover:text-accent/80 font-bold text-lg transition-colors duration-300 group-hover:underline"
+              className="text-primary hover:text-primary/80 font-bold text-lg transition-colors duration-300 group-hover:underline"
             >
               866-567-5220
             </a>
@@ -128,7 +128,7 @@ export default function ContactSection() {
             </h3>
             <div className="text-muted-foreground space-y-1">
               <p>Monday - Friday</p>
-              <p className="font-semibold text-foreground">9:00 AM - 5:00 PM EST</p>
+              <p className="font-semibold text-primary">9:00 AM - 5:00 PM EST</p>
               <p className="text-sm mt-3">Average response time: 24 hours</p>
             </div>
             <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-accent to-secondary w-0 group-hover:w-full transition-all duration-500"></div>

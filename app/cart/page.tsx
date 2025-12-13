@@ -6,19 +6,46 @@ import Footer from "@/components/footer"
 import { useCart } from "@/contexts/cart-context"
 import { Trash2, Plus, Minus, ShoppingBag } from "lucide-react"
 import Link from "next/link"
+import { toast } from "sonner"
 
 export default function CartPage() {
   const { items, removeFromCart, updateQuantity, getTotalPrice, clearCart } = useCart()
   const [isProcessing, setIsProcessing] = useState(false)
 
   const handleCheckout = async () => {
+    if (items.length === 0) {
+      toast.error("Your cart is empty")
+      return
+    }
+
     setIsProcessing(true)
-    // TODO: Integrate with Stripe
-    // For now, simulate checkout process
-    setTimeout(() => {
-      alert("Checkout functionality will be integrated with Stripe. Total: $" + getTotalPrice().toFixed(2))
+
+    try {
+      const response = await fetch("/api/checkout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ items }),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to create checkout session")
+      }
+
+      // Redirect to Stripe Checkout
+      if (data.url) {
+        window.location.href = data.url
+      } else {
+        throw new Error("No checkout URL received")
+      }
+    } catch (error) {
+      console.error("Checkout error:", error)
+      toast.error(error instanceof Error ? error.message : "Failed to start checkout")
       setIsProcessing(false)
-    }, 1000)
+    }
   }
 
   const formatPrice = (price: number) => {
