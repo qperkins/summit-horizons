@@ -61,11 +61,9 @@ export default function Hero() {
                 src="/pexels-shvetsa-11369305.jpg"
                 alt="Professional consultant taking notes"
                 fill
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover"
                 priority
-                quality={85}
-                fetchPriority="high"
               />
             </div>
             <div className="relative h-48 lg:h-64 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 mt-8">
@@ -73,11 +71,9 @@ export default function Hero() {
                 src="/pexels-pavel-danilyuk-8422172.jpg"
                 alt="Warm moment between caregiver and baby"
                 fill
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover"
                 priority
-                quality={85}
-                fetchPriority="high"
               />
             </div>
             <div className="relative h-48 lg:h-64 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
@@ -85,11 +81,9 @@ export default function Hero() {
                 src="/pexels-ron-lach-8541877.jpg"
                 alt="Children engaged in creative activities"
                 fill
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover"
                 priority
-                quality={85}
-                fetchPriority="high"
               />
             </div>
             <div className="relative h-48 lg:h-64 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 mt-8">
@@ -97,11 +91,9 @@ export default function Hero() {
                 src="/pexels-pavel-danilyuk-8423065.jpg"
                 alt="Children playing with modeling clay"
                 fill
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover"
                 priority
-                quality={85}
-                fetchPriority="high"
               />
             </div>
           </div>
